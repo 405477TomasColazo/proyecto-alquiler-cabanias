@@ -120,3 +120,13 @@
     padding: 5px 0;
     border-bottom: 1px solid #eee;
 }
+.reserva-item {
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.reserva-item:hover {
+    cursor: pointer;
+    transform: scale(1.05);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    
+}

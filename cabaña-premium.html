@@ -8,9 +8,52 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+        <!-- Navbar -->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+            <div class="container">
+                <a class="navbar-brand" href="#">
+                    <i class="bi bi-house-heart-fill"></i> Mountain Escape
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav me-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">Inicio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#about">Sobre Nosotros</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#cabañas">Cabañas</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#actividades">Actividades</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#contacto">Contacto</a>
+                        </li>
+                    </ul>
+                    <div class="d-flex">
+                        <div class="dropdown">
+                            <button class="btn btn-outline-light dropdown-toggle" type="button" data-bs-toggle="dropdown">
+                                <i class="bi bi-person-circle"></i> Mi Perfil
+                            </button>
+                            <ul class="dropdown-menu dropdown-menu-end">
+                                <li><a class="dropdown-item" href="#"><i class="bi bi-person"></i> Ver Perfil</a></li>
+                                <li><a class="dropdown-item" href="reservas.html"><i class="bi bi-calendar-check"></i> Mis Reservas</a></li>
+                                <li><a class="dropdown-item" href="#"><i class="bi bi-heart"></i> Favoritos</a></li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li><a class="dropdown-item" href="login.html"><i class="bi bi-box-arrow-right"></i> Cerrar Sesión</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
     <header class="main-header text-center py-3 bg-dark text-white">
         <h1>Cabaña Premium</h1>
-        <a href="index.html" class="btn btn-light">Volver</a>
     </header>
 
     <div class="container mt-4">
@@ -31,5 +74,6 @@
         <h4>Precio:</h4>
         <p><strong>Desde $150/noche</strong></p>
     </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
