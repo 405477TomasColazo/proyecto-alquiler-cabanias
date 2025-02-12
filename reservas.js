@@ -9,6 +9,17 @@ document.addEventListener("DOMContentLoaded", function () {
         localStorage.setItem("reservas", JSON.stringify(reservas));
     }
 
+    function moverUltimaReserva() {
+        let reservas = obtenerReservas();
+        let ultimaReserva = JSON.parse(localStorage.getItem("ultimaReserva"));
+
+        if (ultimaReserva) {
+            reservas.push(ultimaReserva);
+            guardarReservas(reservas);
+            localStorage.removeItem("ultimaReserva");
+        }
+    }
+
     function actualizarLista() {
         let reservas = obtenerReservas();
         reservasLista.innerHTML = "";
@@ -31,13 +42,14 @@ document.addEventListener("DOMContentLoaded", function () {
                 reservasLista.appendChild(reservaItem);
             });
 
+            // Agregar evento a botones de eliminar
             document.querySelectorAll(".eliminar-reserva").forEach(btn => {
                 btn.addEventListener("click", function () {
                     let reservas = obtenerReservas();
                     const index = this.getAttribute("data-index");
                     reservas.splice(index, 1);
                     guardarReservas(reservas);
-                    actualizarLista();
+                    actualizarLista(); // Actualizar sin recargar la página
                 });
             });
         } else {
@@ -45,5 +57,7 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     }
 
+    // Mueve la última reserva a la lista principal y actualiza la página
+    moverUltimaReserva();
     actualizarLista();
 });

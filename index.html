@@ -3,16 +3,61 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Reserva de Cabañas</title>
+    <title>Mountain Escape - Tu refugio perfecto</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header class="main-header">
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <i class="bi bi-house-heart-fill"></i> Mountain Escape
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#inicio">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">Sobre Nosotros</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#cabañas">Cabañas</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#actividades">Actividades</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contacto">Contacto</a>
+                    </li>
+                </ul>
+                <div class="d-flex">
+                    <div class="dropdown">
+                        <button class="btn btn-outline-light dropdown-toggle" type="button" data-bs-toggle="dropdown">
+                            <i class="bi bi-person-circle"></i> Mi Perfil
+                        </button>
+                        <ul class="dropdown-menu dropdown-menu-end">
+                            <li><a class="dropdown-item" href="#"><i class="bi bi-person"></i> Ver Perfil</a></li>
+                            <li><a class="dropdown-item" href="reservas.html"><i class="bi bi-calendar-check"></i> Mis Reservas</a></li>
+                            <li><a class="dropdown-item" href="#"><i class="bi bi-heart"></i> Favoritos</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="#"><i class="bi bi-box-arrow-right"></i> Cerrar Sesión</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="main-header" id="inicio">
         <div class="container d-flex justify-content-between align-items-center">
-            <h1 class="text-white mb-4">Elige tu próximo destino para vacacionar...</h1>
-            <a href="reservas.html" class="btn btn-light">Ver mis reservas</a>
+            <h1 class="text-white mb-4">Descubre tu próximo refugio en la montaña</h1>
         </div>
         <div class="container">
             <div class="search-box">
@@ -21,7 +66,7 @@
                         <div class="search-input location-input">
                             <i class="bi bi-house-door"></i>
                             <select class="form-select border-0" id="tipoCabaña">
-                                <option value="Estandar">Selecciona tipo de cabaña</option>
+                                <option value="">Selecciona tipo de cabaña</option>
                                 <option value="Estandar">Estándar</option>
                                 <option value="Premium">Premium</option>
                                 <option value="Deluxe">Deluxe</option>
@@ -52,8 +97,8 @@
                     
                     <div class="col-md-2">
                         <button type="submit" class="btn btn-primary search-btn w-100">
-                            <i class="bi bi-check-circle"></i>
-                            Reservar
+                            <i class="bi bi-search"></i>
+                            Buscar
                         </button>
                     </div>
                 </form>
@@ -61,55 +106,284 @@
         </div>
     </header>
 
-    <div class="container mt-5">
-        <h2 class="mb-4">Ofertas destacadas</h2>
-        <div class="row">
-            <!-- Cabaña Estándar -->
-            <div class="col-md-4 mb-4">
-                <a href="cabaña-estandar.html" class="text-decoration-none text-dark">
-                    <div class="card cabin-card">
-                        <img src="https://www.maderastecnicasinmunizadas.co/wp-content/uploads/Caban%CC%83as-16.jpg" class="card-img-top" alt="Cabaña estándar">
-                        <div class="card-body">
-                            <h5 class="card-title">Cabaña Estándar</h5>
-                            <p class="card-text">Perfecta para parejas y familias pequeñas</p>
-                            <div class="price"><strong>Desde $100/noche</strong></div>
+    <!-- About Us Section -->
+    <section id="about" class="py-5 bg-light">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <h2 class="mb-4">Sobre Nosotros</h2>
+                    <p class="lead">Bienvenidos a Mountain Escape, tu destino perfecto para escapar de la rutina y conectar con la naturaleza.</p>
+                    <p>Con más de 15 años de experiencia, nos especializamos en brindar experiencias únicas en nuestras cabañas de montaña, combinando el confort moderno con la belleza natural del entorno.</p>
+                    <div class="row mt-4">
+                        <div class="col-md-4 text-center">
+                            <i class="bi bi-house-heart display-4 text-primary"></i>
+                            <h5 class="mt-3">+50 Cabañas</h5>
+                        </div>
+                        <div class="col-md-4 text-center">
+                            <i class="bi bi-people display-4 text-primary"></i>
+                            <h5 class="mt-3">+10000 Huéspedes</h5>
+                        </div>
+                        <div class="col-md-4 text-center">
+                            <i class="bi bi-star display-4 text-primary"></i>
+                            <h5 class="mt-3">4.8/5 Rating</h5>
                         </div>
                     </div>
-                </a>
-            </div>
-        
-            <!-- Cabaña Premium -->
-            <div class="col-md-4 mb-4">
-                <a href="cabaña-premium.html" class="text-decoration-none text-dark">
-                    <div class="card cabin-card">
-                        <img src="https://scontent-eze1-1.xx.fbcdn.net/v/t1.6435-9/43207393_1005273723006320_5822038726204719104_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=127cfc&_nc_eui2=AeF6p7ckxH-LeuAyiHja-m_2B1chxGbIr2AHVyHEZsivYI-nn-RnFhR-cIQ6_HrieEkaVQAIrkZY3qZe8MiYDoBE&_nc_ohc=Za0CwjMbghoQ7kNvgEogV1l&_nc_zt=23&_nc_ht=scontent-eze1-1.xx&_nc_gid=A0i_y-MBMUWJsaSaz6A3wqJ&oh=00_AYBi40erg2EfPq_gp5_WtDO-BrEs8AhtMsrSFKLtmL1a4A&oe=67D378EF" class="card-img-top" alt="Cabaña premium">
-                        <div class="card-body">
-                            <h5 class="card-title">Cabaña Premium</h5>
-                            <p class="card-text">Perfecta para familias</p>
-                            <div class="price"><strong>Desde $150/noche</strong></div>
-                        </div>
-                    </div>
-                </a>
-            </div>
-        
-            <!-- Cabaña Deluxe -->
-            <div class="col-md-4 mb-4">
-                <a href="cabaña-deluxe.html" class="text-decoration-none text-dark">
-                    <div class="card cabin-card">
-                        <img src="https://i.pinimg.com/736x/3c/36/25/3c362522dabc6d17de047ff078838b65.jpg" class="card-img-top" alt="Cabaña deluxe">
-                        <div class="card-body">
-                            <h5 class="card-title">Cabaña Deluxe</h5>
-                            <p class="card-text">Perfecta para familias grandes y grupos de amigos</p>
-                            <div class="price"><strong>Desde $200/noche</strong></div>
-                        </div>
-                    </div>
-                </a>
+                </div>
+                <div class="col-lg-6">
+                    <img src="/api/placeholder/600/400" alt="Sobre nosotros" class="img-fluid rounded shadow">
+                </div>
             </div>
         </div>
-        
-    </div>
+    </section>
 
-    <!-- Modal de confirmación -->
+    <!-- Cabins Section -->
+    <section id="cabañas" class="py-5">
+        <div class="container">
+            <h2 class="mb-4">Nuestras Cabañas</h2>
+            <div class="row">
+                <!-- Cabaña Estándar -->
+                <div class="col-md-4 mb-4">
+                    <div class="card cabin-card h-100">
+                        <div class="position-relative">
+                            <img src="|" class="card-img-top" alt="Cabaña estándar">
+                            <span class="position-absolute top-0 end-0 badge bg-primary m-3">Desde $100/noche</span>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Cabaña Estándar</h5>
+                            <p class="card-text">Perfecta para parejas y familias pequeñas. Incluye:</p>
+                            <ul class="list-unstyled">
+                                <li><i class="bi bi-check-circle-fill text-success"></i> 2 habitaciones</li>
+                                <li><i class="bi bi-check-circle-fill text-success"></i> Cocina equipada</li>
+                                <li><i class="bi bi-check-circle-fill text-success"></i> WiFi gratuito</li>
+                            </ul>
+                        </div>
+                        <div class="card-footer bg-white border-0">
+                            <a href="#" class="btn btn-outline-primary w-100">Ver Detalles</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Cabaña Premium -->
+                <div class="col-md-4 mb-4">
+                    <div class="card cabin-card h-100">
+                        <div class="position-relative">
+                            <img src="/api/placeholder/400/300" class="card-img-top" alt="Cabaña premium">
+                            <span class="position-absolute top-0 end-0 badge bg-primary m-3">Desde $150/noche</span>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Cabaña Premium</h5>
+                            <p class="card-text">Ideal para familias. Incluye:</p>
+                            <ul class="list-unstyled">
+                                <li><i class="bi bi-check-circle-fill text-success"></i> 3 habitaciones</li>
+                                <li><i class="bi bi-check-circle-fill text-success"></i> Jacuzzi privado</li>
+                                <li><i class="bi bi-check-circle-fill text-success"></i> Vista panorámica</li>
+                            </ul>
+                        </div>
+                        <div class="card-footer bg-white border-0">
+                            <a href="#" class="btn btn-outline-primary w-100">Ver Detalles</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Cabaña Deluxe -->
+                <div class="col-md-4 mb-4">
+                    <div class="card cabin-card h-100">
+                        <div class="position-relative">
+                            <img src="/api/placeholder/400/300" class="card-img-top" alt="Cabaña deluxe">
+                            <span class="position-absolute top-0 end-0 badge bg-primary m-3">Desde $200/noche</span>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Cabaña Deluxe</h5>
+                            <p class="card-text">Perfecta para grupos grandes. Incluye:</p>
+                            <ul class="list-unstyled">
+                                <li><i class="bi bi-check-circle-fill text-success"></i> 4 habitaciones</li>
+                                <li><i class="bi bi-check-circle-fill text-success"></i> Piscina privada</li>
+                                <li><i class="bi bi-check-circle-fill text-success"></i> Área de BBQ</li>
+                            </ul>
+                        </div>
+                        <div class="card-footer bg-white border-0">
+                            <a href="#" class="btn btn-outline-primary w-100">Ver Detalles</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Activities Section -->
+    <section id="actividades" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="mb-4">Actividades Disponibles</h2>
+            <div class="row">
+                <div class="col-md-3 mb-4">
+                    <div class="card text-center h-100">
+                        <div class="card-body">
+                            <i class="bi bi-bicycle display-4 text-primary"></i>
+                            <h5 class="card-title mt-3">Ciclismo de Montaña</h5>
+                            <p class="card-text">Recorre nuestros senderos especialmente diseñados</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <div class="card text-center h-100">
+                        <div class="card-body">
+                            <i class="bi bi-tree display-4 text-primary"></i>
+                            <h5 class="card-title mt-3">Senderismo</h5>
+                            <p class="card-text">Explora la naturaleza con guías expertos</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <div class="card text-center h-100">
+                        <div class="card-body">
+                            <i class="bi bi-camera display-4 text-primary"></i>
+                            <h5 class="card-title mt-3">Fotografía</h5>
+                            <p class="card-text">Captura momentos únicos en la naturaleza</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <div class="card text-center h-100">
+                        <div class="card-body">
+                            <i class="bi bi-fire display-4 text-primary"></i>
+                            <h5 class="card-title mt-3">Fogatas</h5>
+                            <p class="card-text">Disfruta de noches estrelladas</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contacto" class="py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <h2 class="mb-4">Contáctanos</h2>
+                    <form>
+                        <div class="mb-3">
+                            <label for="nombre" class="form-label">Nombre</label>
+                            <input type="text" class="form-control" id="nombre" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Email</label>
+                            <input type="email" class="form-control" id="email" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="mensaje" class="form-label">Mensaje</label>
+                            <textarea class="form-control" id="mensaje" rows="4" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Enviar Mensaje</button>
+                    </form>
+                </div>
+                <div class="col-lg-6">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title">Información de Contacto</h5>
+                            <ul class="list-unstyled">
+                                <li class="mb-3">
+                                    <i class="bi bi-geo-alt-fill text-primary me-2"></i>
+                                    Ruta Provincial 82, Km 15, Mendoza, Argentina
+                                </li>
+                                <li class="mb-3">
+                                    <i class="bi bi-telephone-fill text-primary me-2"></i>
+                                    +54 (261) 555-0123
+                                </li>
+                                <li class="mb-3">
+                                    <i class="bi bi-envelope-fill text-primary me-2"></i>
+                                    info@mountainescape.com
+                                </li>
+                                <li class="mb-3">
+                                    <i class="bi bi-clock-fill text-primary me-2"></i>
+                                    Atención: 24/7
+                                </li>
+                            </ul>
+                            <div class="mt-4">
+                                <h5 class="mb-3">Síguenos en redes sociales</h5>
+                                <div class="d-flex gap-3">
+                                    <a href="#" class="text-primary fs-4"><i class="bi bi-facebook"></i></a>
+                                    <a href="#" class="text-primary fs-4"><i class="bi bi-instagram"></i></a>
+                                    <a href="#" class="text-primary fs-4"><i class="bi bi-twitter"></i></a>
+                                    <a href="#" class="text-primary fs-4"><i class="bi bi-youtube"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="bg-primary text-white py-5">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <h3>Suscríbete a nuestro newsletter</h3>
+                    <p>Recibe ofertas exclusivas y novedades directamente en tu correo.</p>
+                </div>
+                <div class="col-lg-6">
+                    <form class="d-flex gap-2">
+                        <input type="email" class="form-control" placeholder="Tu correo electrónico" required>
+                        <button type="submit" class="btn btn-light">Suscribirse</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3 mb-4">
+                    <h5 class="mb-3">Mountain Escape</h5>
+                    <p class="mb-0">Tu refugio perfecto en la montaña para desconectar y crear memorias inolvidables.</p>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <h5 class="mb-3">Enlaces Rápidos</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#inicio" class="text-white-50">Inicio</a></li>
+                        <li><a href="#about" class="text-white-50">Sobre Nosotros</a></li>
+                        <li><a href="#cabañas" class="text-white-50">Cabañas</a></li>
+                        <li><a href="#actividades" class="text-white-50">Actividades</a></li>
+                        <li><a href="#contacto" class="text-white-50">Contacto</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <h5 class="mb-3">Servicios</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-white-50">Reservas</a></li>
+                        <li><a href="#" class="text-white-50">Excursiones Guiadas</a></li>
+                        <li><a href="#" class="text-white-50">Transporte</a></li>
+                        <li><a href="#" class="text-white-50">Eventos Especiales</a></li>
+                        <li><a href="#" class="text-white-50">Gift Cards</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <h5 class="mb-3">Políticas</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-white-50">Términos y Condiciones</a></li>
+                        <li><a href="#" class="text-white-50">Política de Privacidad</a></li>
+                        <li><a href="#" class="text-white-50">Política de Cancelación</a></li>
+                        <li><a href="#" class="text-white-50">FAQ</a></li>
+                    </ul>
+                </div>
+            </div>
+            <hr class="my-4">
+            <div class="row align-items-center">
+                <div class="col-md-6 text-center text-md-start">
+                    <p class="mb-0">&copy; 2025 Mountain Escape. Todos los derechos reservados.</p>
+                </div>
+                <div class="col-md-6 text-center text-md-end">
+                    <img src="/api/placeholder/200/50" alt="Métodos de pago" class="img-fluid">
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modals -->
     <div class="modal fade" id="alquilerModal" tabindex="-1">
         <div class="modal-dialog">
             <div class="modal-content">
