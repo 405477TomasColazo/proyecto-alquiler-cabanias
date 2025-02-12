@@ -1,76 +1,107 @@
-/* Estilos generales */
-body {
-    font-family: 'Arial', sans-serif;
-    line-height: 1.6;
+/* Estilos del header */
+.main-header {
+    background-color: #003580;
+    padding: 2rem 0;
 }
 
-/* Hero section con imagen de fondo */
-.hero {
+/* Caja de búsqueda */
+.search-box {
+    background: white;
+    padding: 4px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
+
+/* Inputs de búsqueda */
+.search-input {
     position: relative;
-    height: 600px;
-    background-image: url('cabaña.png');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+    padding: 10px 15px;
+    border-right: 1px solid #e7e7e7;
+    height: 100%;
+}
+
+.search-input i {
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #6b6b6b;
+}
+
+.search-input select,
+.search-input input {
+    padding-left: 35px;
+    height: 45px;
+    background: transparent;
+}
+
+/* Grupo de fechas */
+.dates-group {
     display: flex;
     align-items: center;
-    justify-content: center;
-    text-align: center;
-    color: white;
-    margin-bottom: 2rem;
-    font-size: 3rem;
+    gap: 10px;
+}
+
+.date-separator {
+    color: #6b6b6b;
+}
+
+/* Botón de búsqueda */
+.search-btn {
+    height: 65px;
+    background-color: #0071c2;
+    border: none;
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+
+.search-btn:hover {
+    background-color: #005999;
+}
+
+/* Cards de cabañas */
+.cabin-card {
+    transition: transform 0.2s;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.cabin-card:hover {
+    transform: translateY(-5px);
+}
+
+.cabin-card img {
+    height: 200px;
+    object-fit: cover;
+}
+
+.price {
+    color: #0071c2;
     font-weight: bold;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    font-size: 1.1rem;
+    margin-top: 10px;
 }
 
-/* Overlay oscuro para mejorar legibilidad */
-.hero::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: rgba(0, 0, 0, 0.5);
-    z-index: 1;
-}
-
-/* Texto del hero */
-.hero-text {
-    position: relative;
-    z-index: 2;
-    font-size: 2.5rem;
-    font-weight: bold;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-    padding: 0 1rem;
-}
-
-/* Estilos del formulario */
-.shadow-custom {
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+/* Mensajes de error */
+.error-message {
+    color: #e31c5f;
+    font-size: 0.875rem;
+    margin-top: 5px;
 }
 
 /* Responsive */
 @media (max-width: 768px) {
-    .hero {
-        height: 300px;
+    .search-input {
+        border-right: none;
+        border-bottom: 1px solid #e7e7e7;
     }
     
-    .hero-text {
-        font-size: 1.8rem;
+    .search-btn {
+        height: 45px;
+        margin-top: 10px;
     }
 }
 
-/* Mejoras visuales adicionales */
-.navbar {
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-.form-control:focus {
-    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
-}
-
-/* Estilos para el modal */
+/* Modal styles */
 .modal-content {
     border-radius: 8px;
 }
@@ -81,9 +112,11 @@ body {
 }
 
 .reservation-details {
-    margin-top: 1rem;
+    margin: 15px 0;
 }
 
 .reservation-details p {
-    margin-bottom: 0.5rem;
+    margin-bottom: 10px;
+    padding: 5px 0;
+    border-bottom: 1px solid #eee;
 }

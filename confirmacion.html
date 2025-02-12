@@ -45,14 +45,16 @@
 
     <script>
         document.addEventListener('DOMContentLoaded', function() {
+            
             const reservaData = JSON.parse(localStorage.getItem('ultimaReserva'));
             if (reservaData) {
                 document.getElementById('confirmationDetails').innerHTML = `
+                    <p><strong>Email:</strong> ${localStorage.getItem('email')}</p>
                     <p><strong>Tipo de Cabaña:</strong> ${reservaData.tipoCabaña}</p>
                     <p><strong>Fecha de Inicio:</strong> ${reservaData.fechaInicio}</p>
                     <p><strong>Fecha de Fin:</strong> ${reservaData.fechaFin}</p>
                     <p><strong>Cantidad de Personas:</strong> ${reservaData.personas}</p>
-                    <p><strong>Precio Total:</strong> $${reservaData.precio}</p>
+                    <p><strong>Precio Total:</strong> $${reservaData.precioTotal}</p>
                 `;
             } else {
                 document.getElementById('confirmationDetails').innerHTML = `
