@@ -1,72 +1,23 @@
-/* Estilos del header */
-.main-header {
-    background-color: #003580;
-    padding: 2rem 0;
+:root {
+    --primary-color: #0d6efd;
+    --dark-color: #212529;
 }
 
-/* Caja de búsqueda */
-.search-box {
-    background: white;
-    padding: 4px;
-    border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
-}
-
-/* Inputs de búsqueda */
-.search-input {
-    position: relative;
-    padding: 10px 15px;
-    border-right: 1px solid #e7e7e7;
-    height: 100%;
-}
-
-.search-input i {
-    position: absolute;
-    left: 15px;
-    top: 50%;
-    transform: translateY(-50%);
-    color: #6b6b6b;
-}
-
-.search-input select,
-.search-input input {
-    padding-left: 35px;
-    height: 45px;
-    background: transparent;
-}
-
-/* Grupo de fechas */
-.dates-group {
+body {
+    min-height: 100vh;
     display: flex;
-    align-items: center;
-    gap: 10px;
+    flex-direction: column;
 }
 
-.date-separator {
-    color: #6b6b6b;
+main {
+    flex: 1;
 }
 
-/* Botón de búsqueda */
-.search-btn {
-    height: 65px;
-    background-color: #0071c2;
-    border: none;
-    font-size: 1.1rem;
-    font-weight: 500;
-}
-
-.search-btn:hover {
-    background-color: #005999;
-}
-
-/* Cards de cabañas */
-.cabin-card {
-    transition: transform 0.2s;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-}
-
-.cabin-card:hover {
-    transform: translateY(-5px);
+.main-header {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://images.unsplash.com/photo-1449158743715-0a90ebb6d2d8') center/cover;
+    padding: 210px 0;
+    text-align: center;
+    color: white;
 }
 
 .cabin-card img {
@@ -74,59 +25,18 @@
     object-fit: cover;
 }
 
-.price {
-    color: #0071c2;
-    font-weight: bold;
-    font-size: 1.1rem;
-    margin-top: 10px;
+.search-box {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.1);
 }
 
-/* Mensajes de error */
-.error-message {
-    color: #e31c5f;
-    font-size: 0.875rem;
-    margin-top: 5px;
+.page-transition {
+    animation: fadeIn 0.3s ease-in;
 }
 
-/* Responsive */
-@media (max-width: 768px) {
-    .search-input {
-        border-right: none;
-        border-bottom: 1px solid #e7e7e7;
-    }
-    
-    .search-btn {
-        height: 45px;
-        margin-top: 10px;
-    }
-}
-
-/* Modal styles */
-.modal-content {
-    border-radius: 8px;
-}
-
-.modal-header {
-    background-color: #f8f9fa;
-    border-radius: 8px 8px 0 0;
-}
-
-.reservation-details {
-    margin: 15px 0;
-}
-
-.reservation-details p {
-    margin-bottom: 10px;
-    padding: 5px 0;
-    border-bottom: 1px solid #eee;
-}
-.reserva-item {
-    transition: transform 0.2s, box-shadow 0.2s;
-}
-
-.reserva-item:hover {
-    cursor: pointer;
-    transform: scale(1.05);
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-    
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
 }
